@@ -9,7 +9,6 @@ import os
 # --- CONFIGURATION DE LA PAGE ---
 st.set_page_config(
     page_title="Analyse du Churn Client",
-    page_icon="🏦",
     layout="wide"
 )
 
@@ -56,11 +55,11 @@ with st.sidebar:
     st.info("Utilisez les onglets pour explorer l'analyse.")
 
 # --- TITRE PRINCIPAL ---
-st.title("🏦 Analyse du Churn Client — Secteur Bancaire")
+st.title("Analyse du Churn Client — Secteur Bancaire")
 st.markdown("---")
 
 # --- ONGLETS ---
-onglet1, onglet2, onglet3 = st.tabs(["📊 Vue Globale", "🔍 Analyse des Causes", "🤖 Simulateur de Risque"])
+onglet1, onglet2, onglet3 = st.tabs(["Vue Globale", "Analyse des Causes", "Simulateur de Risque"])
 
 # --- ONGLET 1 : VUE GLOBALE ---
 with onglet1:
@@ -164,10 +163,10 @@ with onglet3:
             
             st.markdown("---")
             if proba > 0.35:
-                st.error(f"### 🚨 Risque élevé : {risque_pourcentage:.1f}%")
+                st.error(f"### Risque élevé : {risque_pourcentage:.1f}%")
                 st.warning("Le client présente des caractéristiques typiques de départ.")
             else:
-                st.success(f"### ✅ Risque faible : {risque_pourcentage:.1f}%")
+                st.success(f"### Risque faible : {risque_pourcentage:.1f}%")
                 st.info("Le client est probablement fidèle.")
             
             st.progress(proba)
