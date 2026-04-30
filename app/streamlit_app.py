@@ -55,7 +55,7 @@ with st.sidebar:
     st.info("Utilisez les onglets pour explorer l'analyse.")
 
 # --- TITRE PRINCIPAL ---
-st.title("Analyse du Churn Client — Secteur Bancaire")
+st.title("Analyse du Churn — Secteur Télécom")
 st.markdown("---")
 
 # --- ONGLETS ---
@@ -119,7 +119,8 @@ with onglet2:
 # --- ONGLET 3 : SIMULATEUR DE RISQUE ---
 with onglet3:
     st.subheader("Prédire le risque pour un nouveau client")
-    st.write("Remplissez les informations ci-dessous pour tester le modèle :")
+    st.write("Le modèle Random Forest identifie les clients à risque avec une précision globale de 80%.")
+    st.info("Note technique : Pour maximiser la détection (Recall à 70.1%), le seuil de probabilité a été optimisé à 0.3.")
     
     with st.form("simulateur"):
         col1, col2 = st.columns(2)
